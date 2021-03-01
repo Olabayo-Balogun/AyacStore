@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AyacStore.Server", "Server\AyacStore.Server.csproj", "{DC0CF34C-4B66-4AB6-943B-CA7539C4DD18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AyacStore.Client", "Client\AyacStore.Client.csproj", "{DE13A419-31DD-4B70-ACAC-2D9FE90721D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AyacStore.Shared", "Shared\AyacStore.Shared.csproj", "{90F68248-0117-4B24-8069-FE121B82B0CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC0CF34C-4B66-4AB6-943B-CA7539C4DD18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC0CF34C-4B66-4AB6-943B-CA7539C4DD18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC0CF34C-4B66-4AB6-943B-CA7539C4DD18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC0CF34C-4B66-4AB6-943B-CA7539C4DD18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE13A419-31DD-4B70-ACAC-2D9FE90721D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE13A419-31DD-4B70-ACAC-2D9FE90721D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE13A419-31DD-4B70-ACAC-2D9FE90721D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE13A419-31DD-4B70-ACAC-2D9FE90721D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90F68248-0117-4B24-8069-FE121B82B0CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90F68248-0117-4B24-8069-FE121B82B0CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90F68248-0117-4B24-8069-FE121B82B0CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90F68248-0117-4B24-8069-FE121B82B0CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2533E25F-C208-4BFC-BADD-4524A6752D60}
+	EndGlobalSection
+EndGlobal
