@@ -30,6 +30,21 @@ a, .btn-link {
     color: red;
 }
 
+.media-img-wrapper {
+    width: 12.5rem;
+    height: 12.5rem;
+    text-align: center;
+}
+
+.original-price{
+    text-decoration: line-through;
+}
+
+.price{
+    color: green;
+}
+
+
 #blazor-error-ui {
     background: lightyellow;
     bottom: 0;

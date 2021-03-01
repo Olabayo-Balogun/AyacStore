@@ -1,0 +1,55 @@
+﻿<ul class="list-unstyled">
+    @foreach (var product in products)
+    {
+        <li class="media my-3">
+            <div class="media-img-wrapper mr-2">
+                <a href="/product/@product.Id">
+                    <img class="media-img" src="@product.Image" alt="@product.Title" />
+                </a>
+            </div>
+            <div class="media-body">
+                <a href="/product/@product.Id">
+                    <h4 class="mb-0">
+                        @product.Title
+                    </h4>
+                </a>
+                <p>@product.Description</p>
+                @if(product.OriginalPrice > product.Price)
+                {
+            <h6 class="text-muted original-price">
+                &#8358;@product.OriginalPrice
+            </h6>
+            <h5 class="price">
+                ₦@product.Price &#x20A6;
+            </h5>
+                }
+            </div>
+        </li> 
+    }
+</ul>
+
+@code {
+    List<Product> products = new List<Product>
+    {
+        new Product
+        {
+            Id = 1,
+            CategoryId = 1,
+            Title = "Tomatoes",
+            Description = "Fresh Tomatoes sourced directly from farmers in order to provide you with high quality at a price you love",
+            Image = "https://media.istockphoto.com/photos/tomato-isolated-tomato-on-white-background-with-clipping-path-full-picture-id941825808?k=6&m=941825808&s=612x612&w=0&h=zMkokhq3w7fN5xYeiTX27c6TICJ53ZvZg9AY2LNgw_0=",
+            Price = 99.99m,
+            OriginalPrice = 200m,
+        },
+        new Product
+        {
+            Id = 2,
+            CategoryId = 2,
+            Title = "Strawberry",
+            Description = "Fresh Strawberry sourced directly from farmers in order to provide you with high quality at a price you love.  Fun fact; strawberry isn't a berry, botanists acknowledge strawberry as a false fruit because of it's multiple fruit nature",
+            Image = "https://www.thermofisher.com/blog/food/wp-content/uploads/sites/5/2015/08/single_strawberry__isolated_on_a_white_background.jpg",
+            Price = 999.99m,
+            OriginalPrice = 2000m,
+        }
+    };
+}
