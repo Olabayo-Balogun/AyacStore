@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AyacStore.Shared;
+using AyacStore.Server.Services.CategoryService;
 
 namespace AyacStore.Server.Controllers
 {
@@ -11,5 +13,17 @@ namespace AyacStore.Server.Controllers
     [ApiController]
     public class CategoryController : ControllerBase
     {
+        private readonly ICategoryService _categoryService;
+
+        public CategoryController( ICategoryService categoryService)
+        {
+            _categoryService = categoryService;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<List<CategoryController>>> GetCategory()
+        {
+            return Ok( await _categoryService.GetCategories());
+         }
     }
 }

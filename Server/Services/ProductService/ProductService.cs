@@ -4,15 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AyacStore.Client.Services.ProductServices
+namespace AyacStore.Server.Services.ProductService
 {
     public class ProductService : IProductService
     {
-        public List<Product> Products { get; set; } = new List<Product>();
-
-        public void LoadProducts()
-        {
-            Products = new List<Product>
+        public List<Product> Products { get; set; } = new List<Product>
             {
                  new Product {
                     Id = 1,
@@ -84,7 +80,19 @@ namespace AyacStore.Client.Services.ProductServices
                     OriginalPrice = 400m,
                 }
             };
-           
+        public Task<List<Product>> GetAllProducts()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<Product>> GetProduct(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<Product>> GetProductsByCategory(string categoryUrl)
+        {
+            throw new NotImplementedException();
         }
     }
 }
