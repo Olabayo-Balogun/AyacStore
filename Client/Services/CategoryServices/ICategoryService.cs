@@ -8,7 +8,7 @@ namespace AyacStore.Client.Services.CategoryServices
 {
     interface ICategoryService
     {
-        public List<Category> Categories { get; set; }
+        List<Category> Categories { get; set; }
         Task LoadCategories();
     }
 }

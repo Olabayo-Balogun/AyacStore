@@ -8,6 +8,21 @@ namespace AyacStore.Server.Services.ProductService
 {
     public class ProductService : IProductService
     {
+        public async Task<List<Product>> GetAllProducts()
+        {
+            return Products;
+        }
+
+        public async Task<List<Product>> GetProduct(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<List<Product>> GetProductsByCategory(string categoryUrl)
+        {
+            return Products.Where(p  => p.CategoryId == 1).ToList();
+        }
+
         public List<Product> Products { get; set; } = new List<Product>
             {
                  new Product {
@@ -80,19 +95,5 @@ namespace AyacStore.Server.Services.ProductService
                     OriginalPrice = 400m,
                 }
             };
-        public Task<List<Product>> GetAllProducts()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<List<Product>> GetProduct(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<List<Product>> GetProductsByCategory(string categoryUrl)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
