@@ -10,5 +10,6 @@ namespace AyacStore.Server.Services.CategoryService
     {
         Task<List<Category>> GetCategories();
 
+        Task<Category> GetCategoryByUrl(string categoryUrl);
     }
 }

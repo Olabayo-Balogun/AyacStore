@@ -10,6 +10,6 @@ namespace AyacStore.Server.Services.ProductService
     {
         Task<List<Product>> GetAllProducts();
         Task<List<Product>> GetProductsByCategory(string categoryUrl);
-        Task<List<Product>> GetProduct(int id);
+        Task<Product> GetProduct(int id);
     }
 }

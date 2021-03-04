@@ -12,6 +12,8 @@ namespace AyacStore.Client.Services.ProductServices
     {
         private readonly HttpClient _http;
 
+        public event Action OnChange;
+
         public List<Product> Products { get; set; } = new List<Product>();
 
         public ProductService(HttpClient http)
@@ -20,7 +22,22 @@ namespace AyacStore.Client.Services.ProductServices
         }
         public async Task LoadProducts(string categoryUrl = null)
         {
-            Products = await _http.GetFromJsonAsync<List<Product>>($"api/Product/{categoryUrl}");
+            if (categoryUrl == null)
+            {
+                Products = await _http.GetFromJsonAsync<List<Product>>("api/Product/");
+            }
+            else
+            {
+                Products = await _http.GetFromJsonAsync<List<Product>>($"api/Product/Category/{categoryUrl}");
+            }
+            
+            OnChange.Invoke();
         }
+
+        public async Task<Product> GetProduct(int id)
+        {
+            return await _http.GetFromJsonAsync<Product>($"api/Product/{id}");
+            
+        } 
     }
 }
